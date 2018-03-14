@@ -12,8 +12,16 @@ using namespace std;
 \param [in] data The data set that will be searched
 \returns location of key if found or -1 if not found
 */
-int linearSearch(auto data, auto key);//prototype
 
+int linearSearch(auto data, auto key){
+for(auto i = 0u; i < data.size(); i++) 
+   {    
+     if (data[i] == key)
+      return i;
+  }
+   return -1;//not found
+
+}
 
 int main()
 {
