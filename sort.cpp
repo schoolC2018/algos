@@ -42,7 +42,7 @@ void insertionSort(auto & D){
 	     }
 		passes = passes + 1;
 	    }
-		
+		p++;
 	}while (p > 0);
 	cout<< " Final passes completed: "<< passes <<endl;
 	
