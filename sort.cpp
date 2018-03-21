@@ -36,7 +36,7 @@ for (int i=1; i< D.size();i++)
 	     }
 		passes = passes + 1;
 }
-	cout<<" passes completed:"<< passes <<endl;
+	cout<< " passes completed: "<< passes <<endl;
 }
 int main()
 {
