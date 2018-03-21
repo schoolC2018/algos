@@ -24,7 +24,12 @@ for(auto i = 0u; i < data.size(); i++)
 
 void insertionSort(auto & D){
 	int passes = 0;
-for (int i=1; i< D.size();i++)
+	int p=0;
+	do{
+	    if (passes %20000 == 0)
+	    cout<< " passes completed: "<< passes <<endl;
+
+	for ( unsigned int i=1; i< D.size();i++)
 	
 	{
 	  int j = i ;
@@ -33,11 +38,17 @@ for (int i=1; i< D.size();i++)
 
 		 swap (D[j], D[j-1]);
 		  j = j-1;
+
 	     }
 		passes = passes + 1;
+	    }
+		
+	}while (p > 0);
+	cout<< " Final passes completed: "<< passes <<endl;
+	
+
 }
-	cout<< " passes completed: "<< passes <<endl;
-}
+
 int main()
 {
   vector<string> inputs;
@@ -66,7 +77,7 @@ int main()
  
    insertionSort(inputs);
     cout << "data to be sorted"<<endl;
-    for ( int s= 0; s <inputs.size();s++)
+    for ( unsigned int s= 0; s <inputs.size();s++)
 	{
     	   cout << inputs[s]<<endl;
 	}
